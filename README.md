@@ -18,7 +18,7 @@ Official implementation of the ICDAR 2024 paper:
 ## Dataset Preparation and Preprocessing
 
 We use the **MyFonts** dataset to train and evaluate our model.  
-We also use the word2vec vocabulary to filter out impression tags that are not included, treating those tags as noise.
+We also use the **word2vec** vocabulary to filter out impression tags that are not included, treating those tags as noise.
 
 ### 🔽 Download Resources
 
@@ -28,7 +28,8 @@ We also use the word2vec vocabulary to filter out impression tags that are not i
 ### ⚙️ Preprocessing
 
 Run the following scripts to preprocess the MyFonts dataset.  
-More details can be found in the paper and the header comments of each script.
+More details can be found in the paper and the header comments of each script.  
+The `fontnames` directory contains the list of fonts used in our experiments, as well as the train/validation/test splits.  
 
 ```
 python preprocess_fonts.py
@@ -50,7 +51,7 @@ python train.py
 
 ### 📊 Evaluation
 
-Evaluate the model performance using the following script:
+Evaluate the model performance using the following script:  
 This script computes the **average retrieval rank** for both `img2tag` and `tag2img` retrieval tasks.
 
 ```
@@ -66,8 +67,7 @@ If you require additional evaluation tools, feel free to contact us:
 ## Citation
 If you use this code or reference our work, please cite the following:
 ```
-@inproceedings{
-  ImpressionCLIP,
+@inproceedings{kubota2024impressionclip,
   author={Kubota, Yugo and Haraguchi, Daichi and Uchida, Seiichi},
   title={Impression-CLIP: Contrastive Shape-Impression Embedding for Fonts},
   booktitle={Proceedings of the 18th International Conference on Document Analysis and Recognition (ICDAR)},
